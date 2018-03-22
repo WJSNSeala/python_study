@@ -22,7 +22,7 @@ def main():
     for i in word_set:
         word_cnt_dict[i] = file_content.count(i)
 
-    result_list = sorted(word_cnt_dict, key=lambda k: word_cnt_dict[k])[::-1]
+    result_list = sorted(word_cnt_dict, key=lambda k: word_cnt_dict[k], reverse=True)
 
     for i in result_list:
         print "%-10s : " % i + "*" * word_cnt_dict[i]
