@@ -9,8 +9,12 @@ def get_input_name(file_name):
 
 def print_result(file_name):
     with open(file_name, "r") as f:
-        while True:
-            content
+        name_list = f.readlines()
+        print "\nTotal of {} names".format(len(name_list))
+        print "-----------------\n"
+        for i in name_list:
+            print i.replace("\n", "")
+
 def main():
     get_input_name("name_list")
     print_result("name_list")
