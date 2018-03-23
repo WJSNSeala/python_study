@@ -16,7 +16,7 @@ app = Flask(__name__)
 def cur_time():
     date = str(datetime.datetime.now())
     date_dict = {}
-    date_dict["curtime"] = date
+    date_dict["curtime"] = date.split('.')[0]
     json = str(date_dict)
     return json
 
