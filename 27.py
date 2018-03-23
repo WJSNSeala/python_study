@@ -1,5 +1,6 @@
 import re
 
+
 def check_ID(emp_ID):
     filter = re.compile("[A-Z]{2}-[0-9]{4}")
     m = filter.match(emp_ID)
@@ -8,6 +9,7 @@ def check_ID(emp_ID):
     else:
         print "{} is not a valid ID".format(emp_ID)
         return False
+
 
 def check_first_name(first_name):
     if first_name == "":
@@ -20,6 +22,7 @@ def check_first_name(first_name):
     else:
         return True
 
+
 def check_last_name(last_name):
     if last_name == "":
         print "The last name must be filed in"
@@ -30,6 +33,7 @@ def check_last_name(last_name):
     else:
         return True
 
+
 def check_ZIP_code(zip_code):
     filter = re.compile("[0-9]+")
     m = filter.match(zip_code)
@@ -38,6 +42,7 @@ def check_ZIP_code(zip_code):
     else:
         print "The ZIP code must be numeric"
         return False
+
 
 def validateInput(first_name, last_name, zip_code, emp_ID):
     bool_first = check_first_name(first_name)
@@ -49,6 +54,7 @@ def validateInput(first_name, last_name, zip_code, emp_ID):
         return True
     else:
         return False
+
 
 first_name = str(raw_input("Enter the first name: "))
 last_name = str(raw_input("Enter the last name: "))
